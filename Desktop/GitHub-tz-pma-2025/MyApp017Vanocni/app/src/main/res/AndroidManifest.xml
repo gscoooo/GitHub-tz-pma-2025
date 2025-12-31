@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml je základní konfigurační soubor pro každou Android aplikaci.
+    Obsahuje informace o komponentách aplikace (aktivity, služby, atd.), oprávněních,
+    ikoně, názvu a dalších klíčových vlastnostech, které systém Android potřebuje znát,
+    než může aplikaci spustit.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Element <application> obsahuje deklarace pro všechny komponenty a globální
+        nastavení pro celou aplikaci.
+        android:icon - Ikonka aplikace, která se zobrazí na domovské obrazovce.
+        android:label - Název aplikace, který se zobrazí např. pod ikonkou.
+        android:theme - Určuje základní vizuální styl (barvy, fonty) pro celou aplikaci.
+    -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApp017Vanocni">
+
+        <!--
+            Element <activity> deklaruje jednu aktivitu. Naše aplikace má pouze jednu - MainActivity.
+            android:name=".MainActivity" - Název Kotlin třídy, která tuto aktivitu implementuje.
+            android:exported="true" - Znamená, že tuto aktivitu lze spustit z jiné aplikace (v našem případě z launcheru/domovské obrazovky).
+                                     Je to povinné pro spouštěcí aktivitu.
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <!--
+                Intent-filter je pravidlo, které říká systému Android, na jaké "záměry" (intenty)
+                má tato komponenta reagovat.
+            -->
+            <intent-filter>
+                <!-- Akce MAIN značí, že toto je hlavní vstupní bod do aplikace. -->
+                <action android:name="android.intent.action.MAIN" />
+                <!-- Kategorie LAUNCHER znamená, že se ikonka této aktivity objeví v seznamu aplikací (na launcheru). -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

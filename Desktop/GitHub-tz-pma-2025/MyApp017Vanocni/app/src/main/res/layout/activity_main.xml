@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Kořenovým prvkem je LinearLayout, který uspořádává své potomky (v našem případě Toolbar a FragmentContainerView)
+    vertikálně pod sebe (díky android:orientation="vertical").
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--
+        AppBarLayout je kontejner pro Toolbar (horní lištu), který zajišťuje správné stínování
+        a chování při scrollování (i když v naší aplikaci scrollování nemáme).
+    -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--
+            MaterialToolbar je moderní verze horní lišty aplikace.
+            android:id="@+id/toolbar" - Unikátní identifikátor, přes který se na lištu odkazujeme z Kotlin kódu.
+            android:layout_height="?attr/actionBarSize" - Standardní výška pro horní lištu, definovaná v tématu aplikace.
+        -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--
+        FragmentContainerView je speciální kontejner, který slouží jako "okno", ve kterém se budou
+        zobrazovat a střídat jednotlivé fragmenty (naše obrazovky).
+        android:id="@+id/nav_host_fragment" - Unikátní ID pro přístup z Kotlin kódu.
+        android:name="androidx.navigation.fragment.NavHostFragment" - Klíčový řádek, který říká, že tento kontejner bude spravován Navigation component.
+        app:defaultNavHost="true" - Zajišťuje, že tento kontejner bude reagovat na systémové tlačítko "zpět".
+        app:navGraph="@navigation/nav_graph" - Propojuje tento kontejner s naším navigačním grafem (nav_graph.xml), který definuje, jaké obrazovky existují a jak se mezi nimi přechází.
+    -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+</LinearLayout>

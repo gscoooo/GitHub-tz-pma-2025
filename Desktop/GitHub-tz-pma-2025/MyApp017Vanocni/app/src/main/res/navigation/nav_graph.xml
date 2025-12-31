@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Kořenový element <navigation> definuje navigační graf pro aplikaci.
+    Zde popisujeme všechny obrazovky (fragmenty) a možné cesty (akce) mezi nimi.
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wishListFragment">
+
+    <!--
+        Definice první obrazovky (fragmentu).
+        android:id - Unikátní ID, kterým se na tento fragment odkazujeme v rámci grafu.
+        android:name - Plná cesta ke Kotlin třídě fragmentu, který se má zobrazit.
+        android:label - Název obrazovky, který se automaticky zobrazí v horní liště (ActionBar).
+        tools:layout - Říká Android Studiu, jaký layout má zobrazit v náhledu designu (nemá vliv na běh aplikace).
+    -->
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.example.myapp017vanocni.WishListFragment"
+        android:label="Přání Ježíškovi"
+        tools:layout="@layout/fragment_wish_list">
+        <!--
+            Definice akce (přechodu) z této obrazovky na jinou.
+            android:id - Unikátní ID této konkrétní akce.
+            app:destination - ID cílového fragmentu, kam se má přejít.
+        -->
+        <action
+            android:id="@+id/action_wishListFragment_to_addWishFragment"
+            app:destination="@id/addWishFragment" />
+    </fragment>
+
+    <!--
+        Definice druhé obrazovky (fragmentu) pro přidání přání.
+        Struktura je stejná jako u prvního fragmentu.
+        Tento fragment nemá žádnou definovanou akci, protože se z něj pouze vracíme zpět
+        pomocí systémového tlačítka "zpět" (nebo voláním `popBackStack()` v kódu).
+    -->
+    <fragment
+        android:id="@+id/addWishFragment"
+        android:name="com.example.myapp017vanocni.AddWishFragment"
+        android:label="Přidat přání"
+        tools:layout="@layout/fragment_add_wish" />
+</navigation>

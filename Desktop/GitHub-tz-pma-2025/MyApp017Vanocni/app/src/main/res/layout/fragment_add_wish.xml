@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Opět používáme ConstraintLayout pro flexibilní uspořádání prvků.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddWishFragment">
+
+    <!--
+        EditText je standardní textové pole, kam může uživatel psát text.
+        android:id="@+id/wish_input" - Unikátní ID pro přístup z Kotlin kódu.
+        layout_width="0dp" - Šířka se roztáhne podle omezení (od levého k pravému okraji rodiče).
+        android:hint="..." - Text, který se zobrazí jako nápověda, dokud uživatel nezačne psát.
+
+        Constraints:
+        app:layout_constraintTop_toTopOf="parent" - Horní hrana je přichycena k horní hraně rodiče.
+        app:layout_constraintStart_toStartOf="parent" - Levá hrana je přichycena k levé hraně rodiče.
+        app:layout_constraintEnd_toEndOf="parent" - Pravá hrana je přichycena k pravé hraně rodiče.
+        Výsledkem je, že textové pole bude nahoře přes celou šířku obrazovky s definovanými okraji.
+    -->
+    <EditText
+        android:id="@+id/wish_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Napiš své přání..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+        Standardní tlačítko.
+        android:id="@+id/save_button" - Unikátní ID pro přístup z Kotlin kódu.
+        android:text="..." - Text, který se zobrazí na tlačítku.
+
+        Constraints:
+        app:layout_constraintTop_toBottomOf="@+id/wish_input" - Horní hrana tlačítka je přichycena ke spodní hraně EditTextu.
+        app:layout_constraintStart_toStartOf="parent" - Levá hrana je přichycena k levé hraně rodiče.
+        app:layout_constraintEnd_toEndOf="parent" - Pravá hrana je přichycena k pravé hraně rodiče.
+        Výsledkem je, že tlačítko bude umístěno pod textovým polem a bude horizontálně vycentrováno.
+    -->
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Uložit přání"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wish_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

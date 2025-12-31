@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Kořenovým prvkem je ConstraintLayout. Je to mocný a flexibilní layout, který umožňuje vytvářet
+    komplexní uživatelská rozhraní s plochou hierarchií. Funguje tak, že definujeme "omezení" (constraints)
+    mezi jednotlivými prvky a rodičovským layoutem.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WishListFragment">
+
+    <!--
+        TextView bude zobrazovat náš seznam přání.
+        android:id="@+id/wishes_text" - Unikátní ID pro přístup z Kotlin kódu.
+        layout_width/height="0dp" - V ConstraintLayout znamená "0dp" (tzv. match_constraint), že velikost
+                                   bude určena omezeními (constraints), nikoli obsahem.
+        layout_margin - Nastavuje okraje kolem TextView.
+
+        Constraints:
+        app:layout_constraintTop_toTopOf="parent" - Horní hrana TextView je přichycena k horní hraně rodiče (ConstraintLayout).
+        app:layout_constraintBottom_toBottomOf="parent" - Spodní hrana je přichycena ke spodní hraně rodiče.
+        app:layout_constraintStart_toStartOf="parent" - Levá hrana je přichycena k levé hraně rodiče.
+        app:layout_constraintEnd_toEndOf="parent" - Pravá hrana je přichycena k pravé hraně rodiče.
+        Výsledkem těchto čtyř omezení je, že TextView se roztáhne přes celou obrazovku s definovanými okraji.
+    -->
+    <TextView
+        android:id="@+id/wishes_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+        Plovoucí tlačítko pro přidání nového přání.
+        android:id="@+id/add_wish_button" - Unikátní ID pro přístup z Kotlin kódu.
+        layout_width/height="wrap_content" - Velikost tlačítka se přizpůsobí jeho obsahu.
+        android:src="..." - Ikonka, která se zobrazí na tlačítku (zde standardní ikona "plus").
+
+        Constraints:
+        app:layout_constraintBottom_toBottomOf="parent" - Spodní hrana tlačítka je přichycena ke spodní hraně rodiče.
+        app:layout_constraintEnd_toEndOf="parent" - Pravá hrana tlačítka je přichycena k pravé hraně rodiče.
+        Výsledkem je, že tlačítko bude umístěno v pravém dolním rohu obrazovky s definovaným okrajem.
+    -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_wish_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
