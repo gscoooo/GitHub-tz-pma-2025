@@ -1,53 +1,34 @@
 package com.example.myapp009aimagetoapp
 
-import android.graphics.ColorMatrix
-import android.graphics.ColorMatrixColorFilter
+import android.app.Activity
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapp009aimagetoapp.databinding.ActivityMainBinding
+import kotlin.contracts.contract
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var imageView: ImageView
-    private lateinit var btnSelectImage: Button
-    private lateinit var btnGrayscale: Button
-
-    private val selectImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-        uri?.let {
-            imageView.setImageURI(it)
-            // Při načtení nového obrázku resetujeme filtr
-            imageView.colorFilter = null
-        }
-    }
-
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) {
+            uri: Uri? -> binding.ivImage.setImageURI (uri)
         }
 
-        imageView = findViewById(R.id.imageView)
-        btnSelectImage = findViewById(R.id.btnSelectImage)
-        btnGrayscale = findViewById(R.id.btnGrayscale)
+        binding.btnTakeImage.setOnClickListener {
 
-        btnSelectImage.setOnClickListener {
-            selectImageLauncher.launch("image/*")
+            // Tento příkaz spustí výběr obrázku z telefonu
+            // Vybraný obrázek se zobrazí v ImageView
+            getContent.launch("image/*")
         }
 
-        btnGrayscale.setOnClickListener {
-            val colorMatrix = ColorMatrix()
-            colorMatrix.setSaturation(0f)
-            imageView.colorFilter = ColorMatrixColorFilter(colorMatrix)
         }
     }
-}

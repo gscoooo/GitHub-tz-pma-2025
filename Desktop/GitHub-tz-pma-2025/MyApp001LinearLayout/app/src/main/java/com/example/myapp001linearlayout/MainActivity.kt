@@ -20,40 +20,39 @@ class MainActivity : AppCompatActivity() {
             insets
         } */
         val etName = findViewById<EditText>(R.id.etName)
-        val etSureName = findViewById<EditText>(R.id.etSureName)
+        val etSurname = findViewById<EditText>(R.id.etSurname)
         val etPlace = findViewById<EditText>(R.id.etPlace)
         val etAge = findViewById<EditText>(R.id.etAge)
-        val tvInfromation = findViewById<TextView>(R.id.tvInformation)
+        val tvInformation = findViewById<TextView>(R.id.tvInformation)
         val btnSend = findViewById<Button>(R.id.btnSend)
         val btnDelete = findViewById<Button>(R.id.btnDelete)
 
-        // nastavení obsluhy pro tlačítko Odeslat
+        //nastavení obsluhy pro tlačítko Odeslat
+
         btnSend.setOnClickListener {
             val name = etName.text.toString()
-            val sureName = etSureName.text.toString()
+            val surname = etSurname.text.toString()
             val place = etPlace.text.toString()
             val age = etAge.text.toString()
 
-            //Zobrazení textu v TextView
-            val formatedText = "Jmenuji se $name $sureName. Je mi $age let a moje bydliště je $place."
+            // Zobrazení textu v TextView
+            // šedivé = ještě nebylo použito
 
-            tvInfromation.text = formatedText
+            val formatedText = "Jmenuji se $name $surname. Je mi $age let a moje bydliště je $place."
 
-            //Nastavení obsluhy pro tlačítko vymazat
-            btnDelete.setOnClickListener {
-                etName.text.clear()
-                etSureName.text.clear()
-                etPlace.text.clear()
-                etAge.text.clear()
-
-                tvInfromation.text = ""
-
-            }
-
+            tvInformation.text = formatedText
         }
 
+        // Nastavení obsluhy pro tlačítko Vymazat
 
+        btnDelete.setOnClickListener {
+            etName.text.clear()
+            etSurname.text.clear()
+            etPlace.text.clear()
+            etAge.text.clear()
 
-
+            // Vymazání textu z TextView
+            tvInformation.text = ""
+        }
     }
 }

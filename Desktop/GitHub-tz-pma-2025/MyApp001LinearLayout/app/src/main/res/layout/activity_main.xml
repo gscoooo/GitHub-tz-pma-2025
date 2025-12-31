@@ -9,6 +9,7 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,28 +20,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Zadejte jméno"
+            android:hint="Zadejte své jméno"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
             />
 
         <EditText
-            android:id="@+id/etSureName"
+            android:id="@+id/etSurname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Zadejte příjmení"
+            android:hint="Zadejte své příjmení"
             android:layout_weight="1"
             />
 
-         </LinearLayout>
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/etPlace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="Zadejte bydliště"
+        android:hint="Zadejte své bydliště"
         />
 
     <LinearLayout
@@ -48,39 +50,37 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/etAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="Zadejte věk"
-        android:layout_weight="1"
-        android:layout_marginRight="10dp"
-        />
-
-        <Button
-            android:id="@+id/btnSend"
+        <EditText
+            android:id="@+id/etAge"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Odeslat"
-            android:textSize="16sp"
-            android:layout_weight="4"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="@color/btnSendColor"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Zadejte věk"
             />
 
-        <Button
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Odeslat"
+                android:textSize="16sp"
+                android:layout_weight="4"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/btnSendColor"
+                android:textColor="@color/black"
+                />
+
+            <Button
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Vymazat"
             android:textSize="16sp"
             android:layout_weight="4"
-            android:backgroundTint="@color/btnDeleteColor"
+                android:backgroundTint="@color/btnDeleteColor"
+
             />
-
     </LinearLayout>
-
 
     <TextView
         android:id="@+id/tvInformation"
@@ -89,6 +89,9 @@
         android:hint="Informace"
         android:layout_marginTop="20dp"
         android:padding="20dp"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:background="@color/material_dynamic_neutral95"
+        />
+
 
 </LinearLayout>

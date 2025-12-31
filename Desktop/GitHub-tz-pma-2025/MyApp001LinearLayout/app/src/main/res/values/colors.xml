@@ -2,6 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="btnDeleteColor">#EB0C0C</color>
-    <color name="btnSendColor">#03A9F4</color>
+    <color name="btnDeleteColor">#FA3F3F</color>
+    <color name="btnSendColor">#58BA5C</color>
 </resources>

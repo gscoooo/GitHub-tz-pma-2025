@@ -1,40 +1,48 @@
 package com.example.myapp007afragments
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.myapp007afragments.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.btnFragment1.setOnClickListener {
+            replaceFragment(Fragment1())
         }
 
-        val button1: Button = findViewById(R.id.button1)
-        val button2: Button = findViewById(R.id.button2)
+        binding.btnFragment2.setOnClickListener {
+            replaceFragment(Fragment2())
 
-        button1.setOnClickListener {
-            replaceFragment(FragmentOne())
-        }
-
-        button2.setOnClickListener {
-            replaceFragment(FragmentTwo())
         }
     }
 
     private fun replaceFragment(fragment: Fragment) {
+        // získání instance správce fragmentu
+
         val fragmentManager = supportFragmentManager
+
+
+        // vytvoření nové transakce pro fragmenty
+
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragment_container, fragment)
+
+        // nahrazení fragmentu ve view kontejneru novým fragmentem, který byl předán jako argument
+
+        fragmentTransaction.replace(R.id.fragmentContainer, fragment)
+
+        // potvrzení transakce a provedení výměny fragmentu v
         fragmentTransaction.commit()
     }
 }

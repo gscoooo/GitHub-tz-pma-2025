@@ -1,3 +1,5 @@
+lateinit var viewBinding: kotlin.Boolean
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -17,6 +19,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -35,6 +38,10 @@ android {
     }
 }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -46,3 +53,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+annotation class buildFeatures(val value: () -> Unit)

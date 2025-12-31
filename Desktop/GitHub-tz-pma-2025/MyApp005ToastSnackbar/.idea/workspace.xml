@@ -4,46 +4,105 @@
     <shared>
       <config />
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.MyApp005ToastSnackbar</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be231f54-7952-4ec6-82cd-ba1da37c2f27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../MyApp001LinearLayout2/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/.idea/AndroidProjectSystem.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/.idea/migrations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/app/src/main/res/drawable/hyundai_i30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/app/src/main/res/drawable/skoda_octavia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp003Objednavka2/app/src/main/res/drawable/vw_passat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/.idea/AndroidProjectSystem.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/.idea/migrations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/app/src/main/java/com/example/myapp004moreactivities/SecondActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities3/app/src/main/res/layout/activity_second.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp007aFragments/app/src/main/java/com/example/myapp007afragments/FragmentOne.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp007aFragments/app/src/main/java/com/example/myapp007afragments/FragmentTwo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp007aFragments/app/src/main/res/layout/fragment_one.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApp007aFragments/app/src/main/res/layout/fragment_two.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication3/.idea/AndroidProjectSystem.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication3/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication3/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication3/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication3/.idea/migrations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication3/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication3/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="0075366e-b55c-4efb-be67-bf0624310f8b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/java/com/example/my017christmasapp/data/DataStoreModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/java/com/example/my017christmasapp/ui/AboutFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/java/com/example/my017christmasapp/ui/CalendarFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/java/com/example/my017christmasapp/ui/SettingsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/java/com/example/my017christmasapp/ui/StatsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/res/layout/fragment_about.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/res/layout/fragment_calendar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../My017ChristmasApp/app/src/main/res/layout/fragment_stats.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/java/com/example/myapp004moreactivities/ThirdActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/res/layout/activity_third.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/androidTest/java/com/example/myapp015adatastore/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/java/com/example/myapp015adatastore/DataStoreModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/java/com/example/myapp015adatastore/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/java/com/example/myapp015adatastore/UserPreferencesKeys.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/java/com/example/myapp015adatastore/UserPreferencesRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/app/src/test/java/com/example/myapp015adatastore/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp015aDataStore/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/java/com/example/myapp016anavigationdemo/ui/AboutFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/java/com/example/myapp016anavigationdemo/ui/HomeFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/java/com/example/myapp016anavigationdemo/ui/ProfileFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/java/com/example/myapp016anavigationdemo/ui/SettingsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/res/layout/fragment_about.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/res/menu/bottom_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/res/menu/drawer_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApp016aNavigationDemo/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/GameDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/GameDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/GameResult.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/GameResult.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/GameResultDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/GameResultDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/PlayerProgress.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/PlayerProgress.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/PlayerProgressDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/PlayerProgressDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/PreferencesManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/PreferencesManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/Question.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/Question.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/QuestionDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/java/com/example/my013game/QuestionDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My013Game/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../My013Game/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp001LinearLayout/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp001LinearLayout/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp002MyOwnConstraintLayout/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp002MyOwnConstraintLayout/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp003Objednavka/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp003Objednavka/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/java/com/example/myapp004moreactivities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/java/com/example/myapp004moreactivities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/java/com/example/myapp004moreactivities/SecondActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/java/com/example/myapp004moreactivities/SecondActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/res/layout/activity_second2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/res/layout/activity_second2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp004MoreActivities/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapp005toastsnackbar/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapp005toastsnackbar/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp006JetpackComposeMiniToDo2/app/src/main/java/com/example/myapp006jetpackcomposeminitodo/ToDoScreen.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/AddNoteActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/AddNoteActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/data/Note.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/data/Note.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/data/NoteDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/data/NoteDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/data/NoteHubDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/data/NoteHubDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/data/NoteHubDatabaseInstance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/java/com/example/myapp012amynotehub/data/NoteHubDatabaseInstance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/res/layout/activity_add_note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/res/layout/activity_add_note.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/res/layout/activity_edit_note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/res/layout/activity_edit_note.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/res/layout/item_note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApp012aMyNoteHub/app/src/main/res/layout/item_note.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +112,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/michalzila/.android/avd/Medium_Phone.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/lenkakopecka/.android/avd/Pixel_4.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -79,13 +138,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
-  <component name="ProjectId" id="357BfnepRsubHBu1xzDssBH55vi" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="33p84aJu38xz4x1VF92lRVsYe6Z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,7 +157,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "last_opened_file_path": "/Users/lenkakopecka/AndroidStudioProjects/MyApp005ToastSnackbar"
   }
 }]]></component>
   <component name="RunManager">
@@ -180,12 +236,42 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="be231f54-7952-4ec6-82cd-ba1da37c2f27" name="Changes" comment="" />
-      <created>1762451335673</created>
+      <changelist id="0075366e-b55c-4efb-be67-bf0624310f8b" name="Changes" comment="" />
+      <created>1760002462667</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1762451335673</updated>
+      <updated>1760002462667</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/build.gradle.kts</url>
+          <line>37</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.example.myapp005toastsnackbar">
+          <value>
+            <CheckInfo lastCheckTimestamp="1766145678826" />
+          </value>
+        </entry>
+        <entry key="com.example.myapp005toastsnackbar.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1766145678826" />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
