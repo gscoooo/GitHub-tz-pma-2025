@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <!--
+        Uvítací obrazovka. Zobrazí se jako první.
+        Odebrali jsme atribut `android:label`, aby se v horní liště nezobrazoval žádný text.
+    -->
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.myapp100semestralka.ui.WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <!--
+            Akce pro přechod na hlavní obrazovku.
+            `app:popUpTo` a `app:popUpToInclusive` jsou klíčové pro správnou navigaci.
+            Zajišťují, že po přechodu na MainFragment se WelcomeFragment odstraní z historie,
+            takže se na něj nelze vrátit tlačítkem Zpět.
+        -->
+        <action
+            android:id="@+id/action_welcomeFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!--
+        Hlavní obrazovka.
+    -->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.myapp100semestralka.ui.MainFragment"
+        android:label="Jídelníček"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+        <!-- Akce pro reset a návrat na uvítací obrazovku -->
+        <action
+            android:id="@+id/action_mainFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!--
+        Obrazovka pro přidání jídla.
+    -->
+    <fragment
+        android:id="@+id/addFoodFragment"
+        android:name="com.example.myapp100semestralka.ui.AddFoodFragment"
+        android:label="Přidat jídlo"
+        tools:layout="@layout/fragment_add_food" />
+
+</navigation>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout pro hlavní obrazovku (MainFragment).
+    Používáme CoordinatorLayout, který je ideální pro složitější layouty, kde prvky interagují,
+    např. plovoucí tlačítko se schovává při scrollování (to zde nemáme, ale je to dobrá praxe).
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainFragment">
+
+    <!--
+        LinearLayout je jednoduchý kontejner, který prvky řadí pod sebe (díky `android:orientation="vertical"`).
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Textový pozdrav a informace o kaloriích. -->
+        <TextView
+            android:id="@+id/textViewGreeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:text="Ahoj, dnes ti zbývá X kalorií" />
+
+        <!--
+            RecyclerView je klíčová komponenta pro zobrazování dlouhých seznamů dat.
+            `layout_weight="1"` a `layout_height="0dp"` je důležitá kombinace v LinearLayoutu.
+            Znamená to: "Tento prvek zabere všechen zbývající volný prostor na výšku".
+        -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFood"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:listitem="@layout/item_food" /> <!-- `tools:listitem` je skvělá pomůcka pro náhled v editoru. -->
+
+    </LinearLayout>
+
+    <!--
+        Plovoucí akční tlačítko (Floating Action Button - FAB).
+        Je to standardní prvek Material Designu pro hlavní akci na obrazovce.
+        `android:layout_gravity="bottom|end"` ho v CoordinatorLayoutu umístí do pravého dolního rohu.
+    -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Přidat nové jídlo"
+        android:src="@android:drawable/ic_input_add" /> <!-- `ic_input_add` je standardní systémová ikona "+" -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

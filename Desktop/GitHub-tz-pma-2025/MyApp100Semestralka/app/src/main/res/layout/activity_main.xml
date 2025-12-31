@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout pro hlavní aktivitu (MainActivity).
+    Používáme ConstraintLayout, který umožňuje flexibilní uspořádání prvků.
+    Tento layout definuje dva hlavní prvky:
+    1. Horní lištu (Toolbar), která bude sloužit jako ActionBar.
+    2. Kontejner pro fragmenty (FragmentContainerView), kde se budou zobrazovat naše obrazovky.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+        AppBarLayout je kontejner pro Toolbar. Zajišťuje správné zobrazení stínu pod lištou.
+    -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--
+            MaterialToolbar je moderní verze horní lišty z knihovny Material Design.
+            Nastavili jsme ji v MainActivity jako hlavní ActionBar.
+        -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--
+        FragmentContainerView je moderní kontejner pro hostování fragmentů.
+        Atribut `android:name` určuje, že se má použít jako NavHostFragment, což je mozek navigace.
+        Atribut `app:navGraph` ho propojuje s naším navigačním grafem (navigation/nav_graph.xml).
+        Klíčové je omezení `app:layout_constraintTop_toBottomOf="@+id/appBarLayout"`,
+        které zajišťuje, že se fragmenty budou zobrazovat AŽ POD horní lištou.
+    -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:navGraph="@navigation/nav_graph" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

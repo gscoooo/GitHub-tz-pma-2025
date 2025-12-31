@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Toto je layout pro JEDNU položku v seznamu jídel na hlavní obrazovce.
+    Je to jednoduchý ConstraintLayout, který zarovnává prvky vedle sebe a pod sebe.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Zobrazuje název jídla. -->
+    <TextView
+        android:id="@+id/textViewFoodName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewDelete" 
+        android:layout_marginEnd="16dp"
+        tools:text="Kuřecí řízek" />
+
+    <!-- Zobrazuje počet kalorií. -->
+    <TextView
+        android:id="@+id/textViewFoodCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFoodName"
+        tools:text="350 kcal" />
+
+    <!-- Zobrazuje typ jídla. -->
+    <TextView
+        android:id="@+id/textViewFoodType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewFoodCalories"
+        app:layout_constraintTop_toTopOf="@+id/textViewFoodCalories"
+        tools:text="(Oběd)" />
+
+    <!-- Ikona křížku pro smazání položky. -->
+    <ImageView
+        android:id="@+id/imageViewDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" 
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="Smazat položku" />
+
+    <!--
+        Jednoduchá čára (oddělovač) na spodku položky.
+        Zajišťuje vizuální oddělení položek v seznamu, když už nepoužíváme karty.
+    -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" 
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFoodCalories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

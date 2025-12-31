@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout pro obrazovku přidání nového jídla (AddFoodFragment).
+    Používáme zde jednoduchý ConstraintLayout pro zarovnání prvků pod sebe.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.AddFoodFragment">
+
+    <!--
+        Pole pro zadání názvu jídla. `android:hint` je text, který se zobrazí, když je pole prázdné.
+    -->
+    <EditText
+        android:id="@+id/editTextFoodName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Název jídla"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Pole pro zadání počtu kalorií. `android:inputType="number"` omezí klávesnici jen na čísla. -->
+    <EditText
+        android:id="@+id/editTextFoodCalories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Počet kalorií"
+        android:inputType="number"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFoodName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--
+        RadioGroup seskupuje několik RadioButtonů a zajišťuje, že v jednu chvíli může být vybrán pouze jeden.
+        `android:orientation="horizontal"` seřadí tlačítka vedle sebe.
+    -->
+    <RadioGroup
+        android:id="@+id/radioGroupFoodType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFoodCalories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Jednotlivá tlačítka pro výběr typu jídla. -->
+        <RadioButton
+            android:id="@+id/radioButtonBreakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snídaně" />
+
+        <RadioButton
+            android:id="@+id/radioButtonLunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oběd" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Večeře" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSnack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Svačina" />
+
+    </RadioGroup>
+
+    <!-- Tlačítko pro finální uložení. -->
+    <Button
+        android:id="@+id/buttonSaveFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uložit"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupFoodType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

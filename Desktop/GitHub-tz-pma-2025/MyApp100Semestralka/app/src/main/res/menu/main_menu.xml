@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Soubor definující položky v menu (v horní liště) pro hlavní obrazovku.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+        Položka pro resetování uživatelských dat.
+        `app:showAsAction="ifRoom"` se pokusí zobrazit položku jako ikonu, pokud je místo.
+        V našem případě se pravděpodobně schová pod tři tečky.
+    -->
+    <item
+        android:id="@+id/action_reset"
+        android:title="Resetovat uživatele"
+        app:showAsAction="never" />
+</menu>
